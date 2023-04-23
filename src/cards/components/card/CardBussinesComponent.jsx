@@ -28,6 +28,7 @@ export default function CardBussinesComponent({
   handleDelete,
   handleEdit,
   handleLike,
+  user_id,
 }) {
   const navigate = useNavigate();
   return (
@@ -47,9 +48,12 @@ export default function CardBussinesComponent({
         </CardActionArea>
         <CardActionBar
           id={card._id}
+          user_id={card.user_id}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           handleLike={handleLike}
+          user_id={user_id}
+          cardLikes={card.likes}
         />
       </Card>
     </>

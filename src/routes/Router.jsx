@@ -2,18 +2,64 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CardDetailsPage from "../cards/pages/CardDetailsPage";
 import CardPage from "../cards/pages/CardPage";
+import EditCardPage from "../cards/pages/EditCardPage";
+<<<<<<< HEAD
+import FavCardsPage from "../cards/pages/FavCardsPage";
+import MyCardsPage from "../cards/pages/MyCardsPage";
 import AboutPage from "../pages/AboutPage";
 import ErrorPage from "../pages/ErrorPage";
+import MyData from "../sandbox/class 1/MyData";
+import ShowData from "../sandbox/class 2/ShowData";
+import CardsPage from "../sandbox/class Custom hooks/cards/components/CardsPage";
+import Form from "../sandbox/class Custom hooks/forms/Form";
+import FormComponent from "../sandbox/class/FormComponent";
+import FormPage from "../sandbox/class/FormPage";
+import DataConsumer from "../sandbox/context/DataConsumer";
 import Countries from "../sandbox/effectHook/Countries";
 import Effect from "../sandbox/effectHook/Effect";
 import FirstEffect from "../sandbox/effectHook/FirstEffect";
+import FormTest from "../sandbox/forms/FormTest";
+import MyForm from "../sandbox/forms/MyForm";
+import MyForm2 from "../sandbox/forms/MyForm2";
+import MyCounter from "../sandbox/hooks/MyCounter";
 import CallBackHook from "../sandbox/memoryHooks/CallBackHook";
 import Memo from "../sandbox/memoryHooks/Memo";
+import Render from "../sandbox/renders/Render";
+=======
+import FavCards from "../cards/pages/FavCards";
+import MyCards from "../cards/pages/MyCards";
+import AboutPage from "../pages/AboutPage";
+import ErrorPage from "../pages/ErrorPage";
+import MyCounter from "../sandbox/class/customHook/MyCounter";
+import ShowAlert from "../sandbox/class/customHook/ShowAlert";
+import MyData from "../sandbox/class/memorization/MyData";
+import ShowData from "../sandbox/class/memorization/ShowData";
+import ChangeColor from "../sandbox/class/stateTasks/ChangeColor";
+import ChangeStyle from "../sandbox/class/stateTasks/ChangeStyle";
+import Father from "../sandbox/context/Father";
+import Countries from "../sandbox/effectHook/Countries";
+import Effect from "../sandbox/effectHook/Effect";
+import FirstEffect from "../sandbox/effectHook/FirstEffect";
+import MyForm from "../sandbox/forms/MyForm";
+import MyForm2 from "../sandbox/forms/MyForm2";
+import TestForm from "../sandbox/forms/TestForm";
+import CallBackHook from "../sandbox/memoryHooks/CallBackHook";
+import Memo from "../sandbox/memoryHooks/Memo";
+import Counter2 from "../sandbox/render/Counter2";
+import Get2Countries from "../sandbox/render/Get2Countries";
+import RenderComponent from "../sandbox/render/RenderComponent";
+>>>>>>> 328f3c878f4e2bfcc007c639410a6ca9a3f14a15
 import SandBox from "../sandbox/SandBox";
+import GrandFather from "../sandbox/simpleContext/GrandFather";
+import Son from "../sandbox/simpleContext/Son";
 import Counter from "../sandbox/stateHook/Counter";
 import MyDetails from "../sandbox/stateHook/MyDetails";
 import Password from "../sandbox/stateHook/Password";
 import Todo from "../sandbox/stateHook/Todo";
+import ChooseCountry from "../sandbox/tasks/ChooseCountry";
+import LocalPage from "../sandbox/tasks/LocalPage";
+import SaveInLocal from "../sandbox/tasks/SaveInLocal";
+import RefHook from "../sandbox/useRef/RefHook";
 import LoginPage from "../users/pages/LoginPage";
 import SignupPage from "../users/pages/SignupPage";
 import ROUTES from "./routesModel";
@@ -26,6 +72,14 @@ export default function Router() {
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
       <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
+<<<<<<< HEAD
+      <Route path={ROUTES.FAV_CARDS} element={<FavCardsPage />} />
+      <Route path={ROUTES.MY_CARDS} element={<MyCardsPage />} />
+=======
+      <Route path={ROUTES.FAV_CARDS} element={<FavCards />} />
+      <Route path={ROUTES.MY_CARDS} element={<MyCards />} />
+>>>>>>> 328f3c878f4e2bfcc007c639410a6ca9a3f14a15
+      <Route path={`${ROUTES.EDIT_CARD}/:id`} element={<EditCardPage />} />
       <Route path={`${ROUTES.CARD_INFO}/:id`} element={<CardDetailsPage />} />
       <Route path={ROUTES.SANDBOX} element={<SandBox />}>
         <Route path="counter" element={<Counter />} />
@@ -35,7 +89,18 @@ export default function Router() {
         <Route path="firsteffect" element={<FirstEffect />} />
         <Route path="countries" element={<Countries />} />
         <Route path="effect" element={<Effect />} />
+        <Route path="render" element={<Get2Countries />} />
       </Route>
+<<<<<<< HEAD
+      <Route path="render" element={<Render />} />
+      <Route path="ref" element={<RefHook />} />
+      <Route path="chooseCountry" element={<LocalPage />} />
+      <Route path="form" element={<MyForm2 />} />
+
+=======
+      <Route path="test" element={<MyForm />} />
+      <Route path="form" element={<TestForm />} />
+>>>>>>> 328f3c878f4e2bfcc007c639410a6ca9a3f14a15
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
